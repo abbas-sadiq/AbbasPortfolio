@@ -32,7 +32,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold tracking-tight mb-4 text-foreground"
+            className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight mb-4 text-foreground"
           >
             Abbas Sadiq.
           </motion.h1>
@@ -41,7 +41,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-4xl md:text-6xl font-bold tracking-tight text-muted-foreground mb-8"
+            className="text-2xl sm:text-4xl md:text-6xl font-bold tracking-tight text-muted-foreground mb-8"
           >
             I build scalable backends.
           </motion.h2>

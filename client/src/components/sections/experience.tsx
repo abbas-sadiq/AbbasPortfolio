@@ -42,17 +42,17 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-24 bg-background relative">
+    <section id="experience" className="py-16 md:py-24 bg-background relative">
       <div className="container mx-auto px-6">
-        <div className="flex items-center gap-4 mb-16">
-          <span className="text-primary font-mono text-xl">01.</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">Where I've Worked</h2>
+        <div className="flex items-center gap-4 mb-12 md:mb-16">
+          <span className="text-primary font-mono text-lg md:text-xl">01.</span>
+          <h2 className="text-2xl md:text-4xl font-bold text-foreground">Where I've Worked</h2>
           <div className="h-px bg-border flex-grow max-w-xs ml-4"></div>
         </div>
 
-        <div className="relative border-l border-border ml-3 md:ml-6 space-y-12">
+        <div className="relative border-l border-border ml-2 md:ml-6 space-y-12">
           {experiences.map((exp, index) => (
-            <div key={index} className="relative pl-8 md:pl-12 group">
+            <div key={index} className="relative pl-6 md:pl-12 group">
               {/* Timeline Dot */}
               <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-muted-foreground group-hover:bg-primary transition-colors ring-4 ring-background" />
               

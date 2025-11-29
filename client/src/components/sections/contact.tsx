@@ -5,10 +5,10 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24 bg-background/50 text-center">
       <div className="container mx-auto px-6 max-w-2xl">
-        <p className="text-primary font-mono mb-4">04. What's Next?</p>
-        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Get In Touch</h2>
+        <p className="text-primary font-mono mb-4 text-sm md:text-base">04. What's Next?</p>
+        <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">Get In Touch</h2>
         
-        <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
+        <p className="text-muted-foreground text-base md:text-lg mb-10 leading-relaxed">
           I am currently looking for new opportunities as a Software Engineer. 
           Whether you have a question or just want to say hi, my inbox is always open.
         </p>

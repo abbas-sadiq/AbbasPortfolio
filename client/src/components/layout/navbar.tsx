@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { Menu, X, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/mode-toggle";
 import { cn } from "@/lib/utils";
 
 export default function Navbar() {
@@ -65,6 +66,7 @@ export default function Navbar() {
           <Button variant="outline" className="font-mono ml-4 border-primary/50 hover:bg-primary/10 hover:text-primary">
             Resume
           </Button>
+          <ModeToggle />
         </div>
 
         {/* Mobile Menu Button */}
@@ -92,7 +94,12 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
-          <Button className="w-full mt-4 font-mono">Resume</Button>
+          <div className="flex gap-4 mt-4">
+            <Button className="flex-1 font-mono">Resume</Button>
+            <div className="flex items-center justify-center border border-border rounded-md px-3">
+               <ModeToggle />
+            </div>
+          </div>
         </div>
       )}
     </nav>

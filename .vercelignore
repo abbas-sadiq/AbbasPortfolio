@@ -1,0 +1,11 @@
+.git
+.gitignore
+.local
+node_modules
+npm-debug.log
+.DS_Store
+.env.local
+.env.*.local
+dist
+.replit
+replit.nix

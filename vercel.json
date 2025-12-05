@@ -3,11 +3,32 @@
   "builds": [
     {
       "src": "package.json",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "client",
       "use": "@vercel/static-build",
-      "config": { "distDir": "dist/public" }
+      "config": {
+        "distDir": "dist/public",
+        "buildCommand": "npm run build"
+      }
     }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
-  ]
+    {
+      "src": "/api/(.*)",
+      "dest": "server/index.ts"
+    },
+    {
+      "src": "/public/(.*)",
+      "dest": "/dist/public/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/dist/public/index.html"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
 }

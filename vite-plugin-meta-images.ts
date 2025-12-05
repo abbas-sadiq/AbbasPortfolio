@@ -4,7 +4,7 @@ import path from 'path';
 
 /**
  * Vite plugin that updates og:image and twitter:image meta tags
- * to point to the app's opengraph image with the correct Replit domain.
+ * to point to the app's opengraph image with the correct deployment domain.
  */
 export function metaImagesPlugin(): Plugin {
   return {
@@ -12,7 +12,7 @@ export function metaImagesPlugin(): Plugin {
     transformIndexHtml(html) {
       const baseUrl = getDeploymentUrl();
       if (!baseUrl) {
-        log('[meta-images] no Replit deployment domain found, skipping meta tag updates');
+        log('[meta-images] no deployment domain found, skipping meta tag updates');
         return html;
       }
 
@@ -63,15 +63,15 @@ function getDeploymentUrl(): string | null {
     return url;
   }
 
-  if (process.env.REPLIT_INTERNAL_APP_DOMAIN) {
+    if (process.env.REPLIT_INTERNAL_APP_DOMAIN) {
     const url = `https://${process.env.REPLIT_INTERNAL_APP_DOMAIN}`;
-    log('[meta-images] using internal app domain:', url);
+    log('[meta-images] using internal app domain (REPLIT_INTERNAL_APP_DOMAIN):', url);
     return url;
   }
 
   if (process.env.REPLIT_DEV_DOMAIN) {
     const url = `https://${process.env.REPLIT_DEV_DOMAIN}`;
-    log('[meta-images] using dev domain:', url);
+    log('[meta-images] using dev domain (REPLIT_DEV_DOMAIN):', url);
     return url;
   }
  

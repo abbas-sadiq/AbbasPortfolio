@@ -52,13 +52,4 @@ This repo includes a minimal `vercel.json` that uses the `@vercel/static-build` 
 - `vite-plugin-meta-images.ts` (prefer `VERCEL_URL` for meta images)
 - `vercel.json` (new)
 
-## Next steps
 
-- Open the PR at: https://github.com/abbas-sadiq/AbbasPortfolio/pull/2
-- Optionally: update Vercel config to deploy server functions
-
-If you want, I can open the PR in the browser, add reviewers, or change the Vercel setup to include serverless functions.
-
----
-
-File: `README.md`
